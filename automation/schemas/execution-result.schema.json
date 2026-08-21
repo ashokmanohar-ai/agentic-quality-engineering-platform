@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExecutionResult",
+  "type": "object",
+  "required": ["test_id", "status", "duration_ms", "retry_count"],
+  "properties": {
+    "test_id": { "type": "string" },
+    "status": { "enum": ["PASSED", "FAILED", "SKIPPED", "NOT_RUN"] },
+    "duration_ms": { "type": "integer", "minimum": 0 },
+    "retry_count": { "type": "integer", "minimum": 0 }
+  },
+  "additionalProperties": true
+}
+

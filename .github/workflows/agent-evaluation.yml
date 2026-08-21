@@ -1,0 +1,40 @@
+name: Agent Evaluation
+
+on:
+  pull_request:
+    paths:
+      - "app/agents/**"
+      - "app/evaluation/**"
+      - "prompts/**"
+      - "datasets/agent-evaluation/**"
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: Evaluation provider (real providers require environment-protected secrets)
+        required: true
+        default: mock
+        type: choice
+        options: [mock, openai, azure_openai, anthropic]
+
+permissions:
+  contents: read
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.provider != 'mock' && 'model-evaluation' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e '.[dev]'
+      - run: python scripts/run_evaluations.py --provider "${{ inputs.provider || 'mock' }}"
+        env:
+          MODEL_PROVIDER: ${{ inputs.provider || 'mock' }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
