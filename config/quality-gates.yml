@@ -1,0 +1,14 @@
+coverage:
+  critical_requirements: 100
+  overall: 90
+risk:
+  critical_coverage: 100
+execution:
+  critical_pass_rate: 100
+  overall_pass_rate: 98
+agent_evaluation:
+  structured_output_validity: 99
+  traceability: 100
+  tool_correctness: 98
+  maximum_hallucination_rate: 2
+

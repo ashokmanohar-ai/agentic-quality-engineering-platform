@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentic-quality-engineering-platform"
+version = "1.0.0"
+description = "Human-governed agentic quality engineering reference platform"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Ashok Kumar Manohar" }]
+dependencies = [
+  "fastapi>=0.116,<1",
+  "uvicorn[standard]>=0.35,<1",
+  "pydantic>=2.11,<3",
+  "pydantic-settings>=2.10,<3",
+  "langgraph>=0.6,<2",
+  "PyJWT>=2.10,<3",
+  "python-multipart>=0.0.20,<1",
+  "opentelemetry-api>=1.36,<2",
+  "opentelemetry-sdk>=1.36,<2",
+]
+
+[project.optional-dependencies]
+providers = [
+  "openai>=1.99,<3",
+  "anthropic>=0.64,<1",
+]
+rag = [
+  "rank-bm25>=0.2.2,<1",
+  "sentence-transformers>=5,<6",
+  "chromadb>=1.0,<2",
+]
+dev = [
+  "pytest>=8.4,<10",
+  "pytest-asyncio>=1.1,<2",
+  "pytest-cov>=6.2,<8",
+  "ruff>=0.12,<1",
+  "mypy>=1.17,<2",
+  "types-PyJWT>=1.7,<2",
+  "httpx2>=2.12,<3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "ASYNC"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S106"]
+"scripts/*.py" = ["S603"]
+"app/main.py" = ["E501"]
+"app/persistence/database.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+exclude = ["automation/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-q --strict-markers --disable-warnings"
+
+[tool.coverage.run]
+source = ["app"]
+branch = true

@@ -1,0 +1,17 @@
+{
+  "id": "REQ-PAYMENT-RETRY",
+  "project_id": "demo",
+  "tenant_id": "default",
+  "title": "Safe Payment Retry",
+  "user_story": "When a payment provider returns a transient error, the platform should retry safely without creating duplicate charges.",
+  "acceptance_criteria": [
+    "A transient provider response triggers no more than the configured retries",
+    "Every retry reuses the original idempotency key",
+    "Only one successful charge is recorded",
+    "Permanent errors are not retried",
+    "Every retry decision is auditable"
+  ],
+  "critical": true,
+  "source_ids": ["REQ-PAYMENT-RETRY"]
+}
+

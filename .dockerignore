@@ -1,0 +1,14 @@
+.git
+.github
+.venv
+node_modules
+**/__pycache__
+.pytest_cache
+.mypy_cache
+.ruff_cache
+data
+*.db
+*.zip
+automation/playwright/test-results
+automation/playwright/playwright-report
+
