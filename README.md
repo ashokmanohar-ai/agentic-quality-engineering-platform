@@ -244,6 +244,8 @@ python scripts/run_evaluations.py --provider mock
 (cd automation/playwright && npm run format:check && npm run lint && npm run typecheck && npm test)
 ```
 
+The latest evidence-backed results are recorded in the [validation report](docs/validation-report.md).
+
 ## Demonstrations
 
 - **Password Reset:** ambiguity, expiry, password policy, replay/negative/security coverage, and new-login validation.
