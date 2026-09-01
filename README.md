@@ -7,6 +7,33 @@ An enterprise-style reference implementation demonstrating how specialised AI ag
 [![Node 22](https://img.shields.io/badge/Node.js-22-339933)](https://nodejs.org/)
 [![License MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
+## Recruiter quick tour
+
+<p align="center">
+  <img src="docs/assets/recruiter-walkthrough.gif" width="100%" alt="66-second recruiter walkthrough of the agentic quality engineering platform" />
+</p>
+
+> **60-second decision:** this repository proves governed agentic Quality Engineering: nine specialized agents inside explicit LangGraph state, deterministic controls, hash-bound human approval and real Playwright execution evidence.
+
+| Recruiter question | Verifiable answer |
+| --- | --- |
+| **Problem** | A single autonomous “super-agent” can hide invented requirements, unsafe generated automation and unjustified release confidence. |
+| **Architecture** | Requirement and change evidence moves through narrow agents, structured Pydantic outputs and deterministic gates; generated Playwright pauses for approval of the exact artifact hash before fixed-command execution. |
+| **Evidence** | Nine agent contracts, persisted checkpoints, RBAC and tenant scope, static code policy, real Playwright JSON parsing, UNKNOWN confidence fallback, offline evaluation, audit events, Docker and three CI workflows. |
+| **Role signal** | AI Quality Architect, Test Architect, Agentic AI Quality Engineer and Quality Engineering Practice Lead. |
+
+**Five-minute proof**
+
+```bash
+cp .env.example .env
+# set JWT_SECRET and DEMO_PASSWORD
+docker compose up --build -d
+docker compose exec api python scripts/seed_demo.py
+open http://localhost:8080
+```
+
+Expected proof: a seeded, reviewable workflow with dashboard, OpenAPI, persisted state and human-approval boundaries. All datasets, applications and walkthrough claims are synthetic/reference evidence unless explicitly stated otherwise.
+
 ## Why Agentic Quality Engineering?
 
 Quality engineers need help turning incomplete requirements, risk, code changes, historical evidence, and test results into defensible decisions. A single prompt or autonomous “super-agent” hides too much. This platform uses narrow agent responsibilities, explicit LangGraph state, schema validation, deterministic calculations, fixed tools, human approval, and persisted evidence.
