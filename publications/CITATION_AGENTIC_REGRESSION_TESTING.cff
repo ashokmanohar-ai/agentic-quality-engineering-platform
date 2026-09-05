@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it using the metadata below."
+title: "Agentic Regression Testing: Risk-Based Test Selection and Continuous Quality Intelligence with AI Agents"
+type: article
+authors:
+  - family-names: Manohar
+    given-names: Ashok Kumar
+version: 1.0.0
+date-released: 2026-09-05
+url: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform/blob/main/publications/AGENTIC_REGRESSION_TESTING.md"
+repository-code: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform"
+license: MIT
+keywords:
+  - Agentic AI
+  - Regression Testing
+  - Risk-Based Testing
+  - Quality Engineering
+  - AI Quality Engineering
+  - Change Impact Analysis
+  - Test Selection
+  - Test Automation
+  - Continuous Quality
+  - Playwright
+  - CI/CD
+  - Agent Evaluation
+  - Human-in-the-Loop
+  - Release Governance
+abstract: >-
+  An evidence-driven Quality Engineering framework for using AI agents to assist
+  regression-test selection while deterministic change evidence, traceability,
+  mandatory policy and release gates remain authoritative. The work covers
+  change-impact analysis, risk-based selection, test criticality, historical
+  quality intelligence, flaky-test governance, adaptive regression expansion,
+  AI-system regression, observability, agent evaluation, CI/CD quality gates and
+  production feedback into permanent regression evidence.
