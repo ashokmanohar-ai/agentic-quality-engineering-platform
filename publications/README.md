@@ -28,8 +28,25 @@ Focus: role-specialized QE agents, explicit orchestration, typed state, structur
 
 ---
 
-## Reference Implementation
+## 3. Agentic Regression Testing
 
-Both publications are supported by the open-source [Agentic Quality Engineering Platform](https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform), which demonstrates nine specialized QE agents across requirement analysis, risk analysis, test design, coverage review, regression selection, automation generation, execution, failure triage and quality review.
+**Agentic Regression Testing: Risk-Based Test Selection and Continuous Quality Intelligence with AI Agents**
+
+- [Read the white paper](AGENTIC_REGRESSION_TESTING.md)
+- [Citation metadata](CITATION_AGENTIC_REGRESSION_TESTING.cff)
+- Version: 1.0
+- Published: September 2026
+
+Focus: deterministic change evidence, risk-based regression selection, test criticality, traceability, historical quality intelligence, flaky-test governance, adaptive suite expansion, AI-system regression, agent evaluation, observability, CI/CD quality gates and production feedback.
+
+Supporting implementation: [Continuous Quality Engineering](https://github.com/ashokmanohar-ai/continuous-quality-engineering), which demonstrates deterministic change-impact analysis, layered functional/non-functional evidence, flaky-test controls and transparent release gates.
+
+---
+
+## Reference Implementations
+
+The primary open-source [Agentic Quality Engineering Platform](https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform) demonstrates nine specialized QE agents across requirement analysis, risk analysis, test design, coverage review, regression selection, automation generation, execution, failure triage and quality review.
+
+The [Continuous Quality Engineering](https://github.com/ashokmanohar-ai/continuous-quality-engineering) repository provides complementary implementation evidence for deterministic changed-path impact analysis, functional/API/integration/contract/E2E testing, accessibility, security, performance, flaky-test governance and CI/CD release gates.
 
 > These are independent technical white papers and are not peer-reviewed academic publications, compliance certifications, security certifications, or statements of production readiness.
