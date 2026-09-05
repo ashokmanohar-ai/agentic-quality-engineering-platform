@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it using the metadata below."
+title: "Agentic Quality Engineering: A Governed, Evidence-Driven Framework for Testing AI-Powered and Conventional Software Systems"
+type: article
+authors:
+  - family-names: Manohar
+    given-names: Ashok Kumar
+    orcid: ""
+version: 1.0.0
+date-released: 2026-09-05
+url: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform/blob/main/WHITEPAPER.md"
+repository-code: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform"
+license: MIT
+keywords:
+  - Agentic AI
+  - Quality Engineering
+  - Software Testing
+  - AI Quality Engineering
+  - Playwright
+  - LLM Evaluation
+  - RAG Evaluation
+  - AI Governance
+  - Test Automation
+  - AI Agents
+abstract: >-
+  A governed, evidence-driven framework for applying specialized AI agents to
+  Quality Engineering while retaining deterministic controls, traceability,
+  human approval, security boundaries, continuous evaluation, and measurable
+  release evidence.
