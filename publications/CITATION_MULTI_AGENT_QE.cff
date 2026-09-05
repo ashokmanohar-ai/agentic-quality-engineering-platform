@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it using the metadata below."
+title: "Multi-Agent Quality Engineering: Orchestrating Specialized AI Agents Across the Software Testing Lifecycle"
+type: article
+authors:
+  - family-names: Manohar
+    given-names: Ashok Kumar
+version: 1.0.0
+date-released: 2026-09-05
+url: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform/blob/main/publications/MULTI_AGENT_QUALITY_ENGINEERING.md"
+repository-code: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform"
+license: MIT
+keywords:
+  - Multi-Agent Systems
+  - Agentic AI
+  - Quality Engineering
+  - AI Quality Engineering
+  - Software Testing
+  - Test Automation
+  - AI Agents
+  - LangGraph
+  - Playwright
+  - Human-in-the-Loop
+  - AI Governance
+  - Agent Evaluation
+  - CI/CD
+  - Responsible AI
+abstract: >-
+  A practical architecture for orchestrating specialized AI agents across the
+  software testing lifecycle while keeping deterministic engineering controls
+  authoritative. The work covers role-specialized agents, structured contracts,
+  explicit workflow state, evidence-preserving handoffs, least privilege,
+  human approval, execution controls, multi-agent evaluation, security,
+  observability, CI/CD quality gates and evidence-backed release decisions.
