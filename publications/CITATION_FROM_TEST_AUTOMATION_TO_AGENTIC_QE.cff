@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it using the metadata below."
+title: "From Test Automation to Agentic Quality Engineering: The Next Evolution of Software Quality"
+type: article
+authors:
+  - family-names: Manohar
+    given-names: Ashok Kumar
+version: 1.0.0
+date-released: 2026-09-06
+url: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform/blob/main/publications/FROM_TEST_AUTOMATION_TO_AGENTIC_QUALITY_ENGINEERING.md"
+repository-code: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform"
+license: MIT
+keywords:
+  - Agentic Quality Engineering
+  - Test Automation
+  - Quality Engineering
+  - AI Quality Engineering
+  - Agentic AI
+  - Multi-Agent Systems
+  - Test Architecture
+  - Test Automation Evolution
+  - AI-Assisted Testing
+  - Regression Testing
+  - Human-in-the-Loop
+  - AI Governance
+  - AI Agent Evaluation
+  - CI/CD
+  - Quality Gates
+  - AI Observability
+  - Test Failure Triage
+  - Continuous Quality Intelligence
+abstract: >-
+  A strategic Quality Engineering framework describing the evolution from
+  conventional test automation to governed Agentic Quality Engineering. The
+  work introduces an Automate-Assist-Orchestrate-Govern-Learn model that keeps
+  deterministic automation as the execution backbone while adding bounded AI
+  reasoning, specialized agents, typed orchestration, authoritative evidence,
+  least-privilege tools, identity and authorization, human approval, agent
+  evaluation, observability, risk-based release gates and
+  production-to-regression learning.
