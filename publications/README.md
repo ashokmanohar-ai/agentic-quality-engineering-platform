@@ -58,9 +58,26 @@ Focus: the evolution from scripted test automation to Continuous QE, AI-assisted
 
 ---
 
+## 5. AI-Driven Test Case Generation with RAG
+
+**AI-Driven Test Case Generation with RAG: Traceability, Coverage, Risk and Evaluation for Trustworthy AI-Assisted Test Design**
+
+- [Read the white paper](AI_DRIVEN_TEST_CASE_GENERATION_WITH_RAG.md)
+- [Citation metadata](CITATION_AI_DRIVEN_TEST_CASE_GENERATION_WITH_RAG.cff)
+- Version: 1.0
+- Published: September 2026
+
+Focus: the Evidence–Retrieve–Design–Trace–Review–Evaluate–Gate model; requirement and acceptance-criterion analysis; project-scoped RAG with source provenance; risk-based generation; positive, negative, boundary, authorization and state-transition coverage; deterministic traceability and coverage calculation; duplicate detection; unsupported expected results; assumptions; structured outputs; human review; generation-system evaluation; candidate-baseline comparison; repeated-run stability; automation handoff; observability; cost and production-to-regression learning.
+
+> **RAG-assisted test-design paper:** this publication defines how enterprise knowledge retrieval can improve AI test generation without allowing retrieved content or model output to replace authoritative requirements, deterministic coverage controls or accountable review.
+
+---
+
 ## Reference Implementations
 
-The primary open-source [Agentic Quality Engineering Platform](https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform) demonstrates nine specialized QE agents across requirement analysis, risk analysis, test design, coverage review, regression selection, automation generation, execution, failure triage and quality review.
+The primary open-source [Agentic Quality Engineering Platform](https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform) demonstrates nine specialized QE agents across requirement analysis, risk analysis, test design, coverage review, regression selection, automation generation, execution, failure triage and quality review. It also includes project-scoped knowledge retrieval with source IDs and scores, structured agent outputs, deterministic coverage controls and retained governance evidence.
+
+The [RAG & LLM Evaluation Lab](https://github.com/ashokmanohar-ai/rag-llm-evaluation-lab) provides complementary implementation evidence for versioned corpora, retrieval metrics, chunking, hybrid search, bounded context, groundedness, citation integrity, failure localization and RAG regression gates.
 
 The [Continuous Quality Engineering](https://github.com/ashokmanohar-ai/continuous-quality-engineering) repository provides complementary implementation evidence for deterministic changed-path impact analysis, functional/API/integration/contract/E2E testing, accessibility, security, performance, flaky-test governance and CI/CD release gates.
 
