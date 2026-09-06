@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use or reference this work, please cite it using the metadata below."
+title: "AI-Driven Test Case Generation with RAG: Traceability, Coverage, Risk and Evaluation for Trustworthy AI-Assisted Test Design"
+type: article
+authors:
+  - family-names: Manohar
+    given-names: Ashok Kumar
+version: 1.0.0
+date-released: 2026-09-06
+url: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform/blob/main/publications/AI_DRIVEN_TEST_CASE_GENERATION_WITH_RAG.md"
+repository-code: "https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform"
+license: MIT
+keywords:
+  - AI-Driven Test Case Generation
+  - RAG
+  - Retrieval-Augmented Generation
+  - AI Quality Engineering
+  - Agentic Quality Engineering
+  - Test Design
+  - Test Case Generation
+  - Traceability
+  - Test Coverage
+  - Risk-Based Testing
+  - Requirement Analysis
+  - Knowledge Retrieval
+  - LLM Evaluation
+  - AI Agent Evaluation
+  - Human-in-the-Loop
+  - CI/CD
+  - Quality Gates
+  - Test Automation
+abstract: >-
+  An evidence-driven Quality Engineering framework for generating trustworthy
+  test cases with Retrieval-Augmented Generation and AI agents. The work
+  introduces an Evidence-Retrieve-Design-Trace-Review-Evaluate-Gate model
+  spanning requirements, acceptance criteria, project-scoped retrieval,
+  source provenance, risk analysis, structured test generation, positive and
+  negative coverage, authorization and state-transition testing, deterministic
+  traceability and coverage, duplicate detection, unsupported expected results,
+  assumptions, LLM-as-a-Judge governance, human review, versioned evaluation
+  datasets, candidate-baseline comparison, repeated-run stability, automation
+  handoff, observability, cost and production-to-regression learning.
