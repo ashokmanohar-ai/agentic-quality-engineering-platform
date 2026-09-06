@@ -43,6 +43,21 @@ Supporting implementation: [Continuous Quality Engineering](https://github.com/a
 
 ---
 
+## 4. From Test Automation to Agentic Quality Engineering
+
+**From Test Automation to Agentic Quality Engineering: The Next Evolution of Software Quality**
+
+- [Read the white paper](FROM_TEST_AUTOMATION_TO_AGENTIC_QUALITY_ENGINEERING.md)
+- [Citation metadata](CITATION_FROM_TEST_AUTOMATION_TO_AGENTIC_QE.cff)
+- Version: 1.0
+- Published: September 2026
+
+Focus: the evolution from scripted test automation to Continuous QE, AI-assisted testing and governed Agentic QE; the Automate–Assist–Orchestrate–Govern–Learn model; specialized agents; deterministic-first controls; structured orchestration; risk-based regression; artifact-bound approval; identity and authorization; agent security; observability; agent evaluation; production-to-regression learning; QE skill evolution; operating model and maturity.
+
+> **Strategic evolution paper:** this publication explains why Agentic QE is not test automation with an LLM added, but a governed quality-control architecture combining deterministic automation, bounded AI reasoning, explicit authority, human accountability and retained evidence.
+
+---
+
 ## Reference Implementations
 
 The primary open-source [Agentic Quality Engineering Platform](https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform) demonstrates nine specialized QE agents across requirement analysis, risk analysis, test design, coverage review, regression selection, automation generation, execution, failure triage and quality review.
