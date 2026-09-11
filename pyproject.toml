@@ -24,12 +24,12 @@ dependencies = [
 
 [project.optional-dependencies]
 providers = [
-  "openai>=1.99,<3",
-  "anthropic>=0.64,<1",
+  "openai>=1.99,<4",
+  "anthropic>=0.64,<2",
 ]
 rag = [
   "rank-bm25>=0.2.2,<1",
-  "sentence-transformers>=5,<6",
+  "sentence-transformers>=5,<7",
   "chromadb>=1.0,<2",
 ]
 dev = [
@@ -37,7 +37,7 @@ dev = [
   "pytest-asyncio>=1.1,<2",
   "pytest-cov>=6.2,<8",
   "ruff>=0.12,<1",
-  "mypy>=1.17,<2",
+  "mypy>=1.17,<3",
   "types-PyJWT>=1.7,<2",
   "httpx2>=2.12,<3",
 ]
