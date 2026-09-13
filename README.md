@@ -1,120 +1,132 @@
 # Agentic Quality Engineering Platform
 
-An enterprise-style reference implementation demonstrating how specialised AI agents can support requirement analysis, risk-based test design, regression selection, automation generation, execution, failure triage, quality evaluation, and release-readiness decisions with human governance and measurable AI evaluation.
-
 [![CI](https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/ashokmanohar-ai/agentic-quality-engineering-platform/actions/workflows/ci.yml)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB)](https://www.python.org/)
 [![Node 22](https://img.shields.io/badge/Node.js-22-339933)](https://nodejs.org/)
 [![License MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Recruiter quick tour
+> **Recruiter signal:** governed Agentic Quality Engineering with nine specialised QE agents, explicit LangGraph state, deterministic controls, hash-bound human approval and real Playwright execution evidence.
 
-<p align="center">
-  <img src="docs/assets/recruiter-walkthrough.gif" width="100%" alt="66-second recruiter walkthrough of the agentic quality engineering platform" />
-</p>
+**Part of the broader AI Quality Engineering portfolio:** [Live AI Assurance Portfolio](https://enterprise-ai-quality-portfolio-recruiter-showcase-v700x0.v2.appdeploy.ai/)
 
-> **60-second decision:** this repository proves governed agentic Quality Engineering: nine specialized agents inside explicit LangGraph state, deterministic controls, hash-bound human approval and real Playwright execution evidence.
+## The problem
 
-| Recruiter question | Verifiable answer |
-| --- | --- |
-| **Problem** | A single autonomous “super-agent” can hide invented requirements, unsafe generated automation and unjustified release confidence. |
-| **Architecture** | Requirement and change evidence moves through narrow agents, structured Pydantic outputs and deterministic gates; generated Playwright pauses for approval of the exact artifact hash before fixed-command execution. |
-| **Evidence** | Nine agent contracts, persisted checkpoints, RBAC and tenant scope, static code policy, real Playwright JSON parsing, UNKNOWN confidence fallback, offline evaluation, audit events, Docker and three CI workflows. |
-| **Role signal** | AI Quality Architect, Test Architect, Agentic AI Quality Engineer and Quality Engineering Practice Lead. |
+A single autonomous “super-agent” can hide invented requirements, unsafe automation, weak traceability and unjustified release confidence.
 
-**Five-minute proof**
+This platform demonstrates a different approach: **narrow agent responsibilities + structured outputs + deterministic controls + explicit human approval + persisted evidence**.
+
+## Architecture
+
+```mermaid
+flowchart TD
+    A[Requirement + evidence] --> B[LangGraph orchestrator]
+    B --> C[Analysis, risk, tests]
+    C --> D{Deterministic gates}
+    D -->|gap| C
+    D -->|pass| E[Automation proposal + validation]
+    E --> F{Human approval}
+    F -->|approve| G[Playwright execution]
+    F -->|reject| H[Safe stop]
+    G --> I[Triage + quality review]
+    I --> J[Evidence-backed release recommendation]
+```
+
+## End-to-end workflow
+
+**Requirement → Requirement Analysis → Risk Analysis → Test Design → Coverage Gate → Regression Selection → Automation Generation → Static/Compiler Validation → Human Approval → Playwright Execution → Failure Triage → Quality Review → Release Recommendation**
+
+## Agent catalogue
+
+| Agent | Responsibility | Deterministic control |
+| --- | --- | --- |
+| Requirement Analyst | Extract facts and expose ambiguity | Empty/duplicate/missing-criteria checks |
+| Risk Analyst | Propose risk and tests | Risk score + level calculation |
+| Test Designer | Create traceable cases | Non-orphan schema validation |
+| Coverage Reviewer | Identify gaps | Coverage percentages + thresholds |
+| Regression Selector | Select impacted tests | Git diff parser is source of truth |
+| Automation Generator | Propose Playwright code | Safe path + static code policy |
+| Execution Agent | Execute approved artifact | Hash-bound approval + fixed command |
+| Failure Triage | Classify observed failure | Confidence thresholds + UNKNOWN fallback |
+| Quality Reviewer | Explain release risk | Mandatory gates cannot be overridden by AI |
+
+## Engineering evidence
+
+- **9 specialised QE agents** with explicit contracts
+- Persisted workflow checkpoints and audit events
+- Pydantic v2 structured outputs
+- Deterministic risk, coverage, traceability and release calculations
+- Real Playwright JSON parsing—no fabricated test results
+- Hash-bound approval of generated automation
+- RBAC with VIEWER / QUALITY_ENGINEER / APPROVER / ADMIN
+- Tenant/project scoping
+- Static code safety policy for generated tests
+- Mock provider for zero-cost deterministic CI
+- Optional Azure OpenAI, OpenAI-compatible and Anthropic adapters
+- OpenTelemetry-ready instrumentation and optional Phoenix
+- Docker + FastAPI/OpenAPI + GitHub Actions
+
+## Measurable controls
+
+The bundled evaluation set contains **36 cases** covering requirement ambiguity, security, integration failures, regression selection, automation/data/environment/network failures, prompt injection, path/command safety, coverage, release decisions, approvals, malformed model output, loop guards, tenancy, secret masking and traceability.
+
+Default evaluation gates include:
+
+- **≥99% structured validity**
+- **100% traceability**
+- **≥98% tool correctness**
+- **≤2% unsupported-reference rate**
+
+These are reference-framework thresholds, not customer production claims.
+
+## 5-minute proof
 
 ```bash
 cp .env.example .env
 # set JWT_SECRET and DEMO_PASSWORD
 docker compose up --build -d
 docker compose exec api python scripts/seed_demo.py
-open http://localhost:8080
 ```
 
-Expected proof: a seeded, reviewable workflow with dashboard, OpenAPI, persisted state and human-approval boundaries. All datasets, applications and walkthrough claims are synthetic/reference evidence unless explicitly stated otherwise.
+Open:
 
-## Why Agentic Quality Engineering?
+- `http://localhost:8080` — dashboard
+- `http://localhost:8080/docs` — OpenAPI
 
-Quality engineers need help turning incomplete requirements, risk, code changes, historical evidence, and test results into defensible decisions. A single prompt or autonomous “super-agent” hides too much. This platform uses narrow agent responsibilities, explicit LangGraph state, schema validation, deterministic calculations, fixed tools, human approval, and persisted evidence.
+Expected proof: a seeded, reviewable workflow with persisted state, agent evidence, human-approval boundaries and release recommendation.
 
-> Agents assist Quality Engineering decisions. They do not remove engineering controls.
+## Quality controls by stage
 
-The project demonstrates both sides of Agentic QE: using agents to improve software quality, and engineering, testing, evaluating, governing, and observing the agents themselves.
+### Requirement, risk and design
 
-## Key Features
+Basic requirement checks run before AI. Agents surface ambiguity rather than filling gaps. Every test must reference a requirement and acceptance criterion. Risk levels are calculated in code.
 
-- Nine specialised QE agents with clear inputs, outputs, and restrictions
-- Explicit LangGraph workflows with checkpoints, pause/resume, retry bounds, and loop guards
-- Pydantic v2 structured outputs; malformed outputs fail safely
-- Transparent risk score: probability × impact
-- Deterministic traceability, coverage, evaluation, and release gates
-- Risk-based regression selection grounded only in parsed git diff evidence
-- Playwright TypeScript generation with static policy, lint, typecheck, discovery, and human approval gates
-- Real Playwright JSON result parsing—no fabricated test results
-- Evidence-aware failure triage with confidence thresholds and `UNKNOWN` fallback
-- Mock provider for zero-cost CI; optional Azure OpenAI, OpenAI-compatible, and Anthropic adapters
-- SQLite local persistence with project/tenant scope, audit events, agent runs, approvals, tokens, latency, and prompt versions
-- Optional project knowledge retrieval with source IDs and scores
-- JWT demo authentication and `VIEWER`, `QUALITY_ENGINEER`, `APPROVER`, `ADMIN` roles
-- OpenTelemetry-ready spans and opt-in Phoenix service
-- FastAPI/OpenAPI, a lightweight dashboard, Docker, and three GitHub Actions workflows
+### Coverage and regression
 
-## Architecture
+Coverage percentages come from IDs, never model estimates. Changed-file evidence comes from a fixed git-diff tool. Critical requirement/risk coverage is gated deterministically.
 
-```mermaid
-flowchart TD
-    A["Requirement + evidence"] --> B["LangGraph orchestrator"]
-    B --> C["Analysis, risk, tests"]
-    C --> D{"Deterministic gates"}
-    D -->|gap| C
-    D -->|pass| E["Automation proposal + validation"]
-    E --> F{"Human approval"}
-    F -->|approve| G["Playwright execution"]
-    F -->|reject| H["Safe stop"]
-    G --> I["Triage + quality review"]
-    I --> J["Evidence-backed release recommendation"]
-```
+### Automation and execution
 
-All important state is persisted, and every high-impact transition retains actor, timestamp, evidence, decision, and artifact hash. See [architecture](docs/architecture.md) and [orchestration](docs/orchestration.md).
+Generated files are restricted to `automation/playwright/generated/*.spec.ts`. Static policy blocks traversal, sleeps, brittle XPath, embedded passwords, focused/skipped tests and shell APIs. Validation happens before approval; execution uses fixed commands only.
 
-## Agent Catalogue
+### Triage and release
 
-| Agent | Responsibility | Deterministic control |
-|---|---|---|
-| Requirement Analyst | Extract facts and expose ambiguity | Empty, short, duplicate, and missing-criteria checks |
-| Risk Analyst | Propose risk, rationale, and tests | Score and level calculation |
-| Test Designer | Propose traceable cases | Non-orphan schema validation |
-| Coverage Reviewer | Identify gaps | Percentages and mandatory thresholds |
-| Regression Selector | Classify existing tests | Git diff parser is source of truth |
-| Automation Generator | Propose Playwright code | Safe path and static code policy |
-| Execution Agent | Run approved artifacts | Hash-bound approval and fixed command |
-| Failure Triage | Classify actual failures | Confidence thresholds and `UNKNOWN` fallback |
-| Quality Reviewer | Explain release risk | Mandatory release gates cannot be overridden by AI |
+Triage separates evidence from hypothesis. Low confidence becomes `UNKNOWN`. Mandatory failures force `FAIL`; AI narrative cannot override deterministic policy.
 
-Detailed contracts and failure modes are in [agent design](docs/agent-design.md).
+## Security and governance
 
-## Workflow
+- Uploaded content is delimited and treated as untrusted
+- No arbitrary shell tool is exposed
+- Generated file paths stay inside a dedicated workspace
+- Approval and execution enforce roles and tenant/project scope
+- Secrets are environment-based and masked
+- Approval is bound to artifact content hash
+- Human overrides retain original decision, reason, approver and timestamp
 
-```text
-Requirement → Requirement Analysis → Risk Analysis → Test Design
-→ Coverage Gate → Regression Selection → Automation Generation
-→ Static/Compiler Validation → Human Approval → Playwright Execution
-→ Failure Triage → Quality Review → Release Recommendation
-```
+## Technology stack
 
-The workflow pauses at `AUTOMATION_REVIEW`. An approver can accept or reject the exact artifact hash. A separately governed record is required to override a completed release recommendation; the original decision is never replaced in the audit history.
+`Python 3.12` · `FastAPI` · `Pydantic v2` · `LangGraph` · `SQLite` · `Playwright` · `TypeScript` · `Node.js 22` · `OpenTelemetry` · `Phoenix` · `Pytest` · `Ruff` · `MyPy` · `GitHub Actions`
 
-## Technology Stack
-
-- Python 3.12, FastAPI, Pydantic v2, Uvicorn
-- LangGraph explicit stateful orchestration
-- SQLite by default; repository interface isolates persistence
-- Playwright, TypeScript, Node.js 22
-- OpenTelemetry; optional Arize Phoenix container profile
-- Pytest, Ruff, MyPy, ESLint, Prettier, GitHub Actions
-
-## Repository Structure
+## Repository map
 
 ```text
 app/                    FastAPI, agents, orchestration, tools, policies
@@ -128,173 +140,36 @@ docs/                   Architecture, governance, security, interviews
 .github/workflows/      CI, agent evaluation, nightly quality
 ```
 
-## Getting Started
+## Recruiter demo path
 
-### Docker (recommended)
+1. Show the explicit LangGraph workflow.
+2. Open one agent contract and deterministic gate.
+3. Demonstrate hash-bound automation approval.
+4. Show real Playwright execution evidence.
+5. Show failure triage with `UNKNOWN` fallback.
+6. Finish with the release recommendation and audit evidence.
+7. Connect the story to the [live AI Assurance portfolio](https://enterprise-ai-quality-portfolio-recruiter-showcase-v700x0.v2.appdeploy.ai/).
 
-```bash
-cp .env.example .env
-## Set JWT_SECRET and DEMO_PASSWORD in .env before starting.
-docker compose up --build -d
-curl http://localhost:8080/health
-docker compose exec api python scripts/seed_demo.py
-```
+## Documentation
 
-Open `http://localhost:8080` for the dashboard or `http://localhost:8080/docs` for OpenAPI. Enable optional local Phoenix with:
-
-```bash
-docker compose --profile observability up -d
-```
-
-### Local development
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -e '.[dev]'
-cp .env.example .env
-## Set JWT_SECRET and DEMO_PASSWORD in .env before starting.
-python scripts/seed_demo.py
-uvicorn app.main:app --reload --port 8080
-```
-
-Windows PowerShell activation is `.venv\Scripts\Activate.ps1`.
-
-Install the isolated automation workspace:
-
-```bash
-cd automation/playwright
-npm ci
-npx playwright install chromium
-npm run lint
-npm run typecheck
-npm test
-```
-
-## Configuration and Offline Mode
-
-`MODEL_PROVIDER=mock` is the safe default. It produces deterministic structured fixtures, reports zero token cost, and makes API, workflow, and evaluation testing reproducible without credentials. Low temperature, structured schemas, prompt versions, fixed datasets, and deterministic tools improve repeatability; real model output can still vary.
-
-Copy `.env.example`; never commit `.env`. Provider credentials are loaded only by the selected optional adapter. Telemetry is disabled by default and secret masking is applied before structured logs/audit payloads.
-
-## Run a Workflow through the API
-
-Get a demo token after changing `DEMO_PASSWORD` in `.env`:
-
-```bash
-curl -s http://localhost:8080/api/v1/auth/token \
-  -H 'Content-Type: application/json' \
-  -d '{"username":"qe","password":"YOUR_DEMO_PASSWORD","role":"QUALITY_ENGINEER","tenant_id":"default"}'
-```
-
-Demo usernames have fixed roles: `viewer`, `qe`, `approver`, and `admin`. A caller cannot assign a different role in the token request. The shared demo password is intentionally local-only.
-
-Create a project and requirement, then start the graph:
-
-```bash
-curl -X POST http://localhost:8080/api/v1/projects \
-  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
-  -d '{"id":"demo","name":"Interview Demo"}'
-
-curl -X POST http://localhost:8080/api/v1/requirements \
-  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
-  --data @datasets/requirements/password-reset.json
-
-curl -X POST http://localhost:8080/api/v1/workflows \
-  -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \
-  -d '{"project_id":"demo","requirement_id":"REQ-PASSWORD-RESET"}'
-```
-
-Use an `APPROVER` token to approve the reported artifact hash, then use an authorised engineering token to call `/api/v1/workflows/{id}/execute`. The report endpoint returns requirements, risks, tests, automation, execution, triage, timeline, and release evidence.
-
-## Quality Controls by Stage
-
-### Requirement, risk, and test design
-
-Basic requirement checks run before AI. Agents surface ambiguity instead of filling gaps. Every test must reference a requirement and acceptance criterion; risk references are preserved where applicable. Risk scores and levels are calculated in code.
-
-### Coverage and regression
-
-Coverage percentages are computed from IDs, never estimated by a model. Default gates require 100% critical requirement and critical risk coverage and at least 90% overall coverage. Regression confidence is advisory and all changed-file evidence comes from the fixed git diff tool.
-
-### Automation and execution
-
-Generated files are restricted to `automation/playwright/generated/*.spec.ts`. Static policy blocks traversal, sleeps, brittle XPath, embedded passwords, focused/skipped tests, and shell APIs. Validation precedes hash-bound human approval. The execution adapter accepts no model-supplied command and parses actual Playwright JSON.
-
-### Triage and release decision
-
-Triage separates evidence from hypothesis. Low confidence becomes `UNKNOWN`. Mandatory failures—coverage gate failure, failed critical execution, or unresolved product defect—force `FAIL`. Warnings can yield `CONDITIONAL_PASS`. AI supplies narrative only; it cannot override deterministic policy.
-
-## Agent Evaluation
-
-The bundled 36-case dataset covers clear and ambiguous requirements, security, integrations, regressions, automation/data/environment/network failures, prompt injection, path and command safety, coverage, release decisions, approvals, model failure, malformed output, loop guards, tenancy, secret masking, and traceability.
-
-```bash
-python scripts/run_evaluations.py --provider mock
-```
-
-Default gates: ≥99% structured validity, 100% traceability, ≥98% tool correctness, and ≤2% unsupported-reference rate. LLM-as-a-Judge is reserved for qualitative dimensions and uses a structured `JudgeScore`; it is never used for arithmetic or identifier checks. See [agent evaluation](docs/agent-evaluation.md).
-
-## RAG and Retrieval
-
-The optional knowledge layer chunks text deterministically, enforces project scope, and returns source ID, chunk, and score. The core runs without embeddings. The `rag` extra enables future sentence-transformer/Chroma expansion; retrieval precision, recall, and source correctness must be evaluated before production use.
-
-## Observability
-
-Agent runs retain provider, model, prompt/version, input hash, schema status, latency, tokens, and estimated cost. Audit events capture state transitions, tools, approvals, executions, and decisions. OpenTelemetry is opt-in so sensitive content is not exported by default. See [observability](docs/observability.md).
-
-## Security and Governance
-
-- Uploaded content is explicitly delimited and treated as untrusted data
-- No arbitrary shell tool exists; commands are fixed and allow-listed
-- Generated file paths are resolved beneath a dedicated workspace
-- Approval and execution APIs enforce roles and tenant/project scope
-- Secrets are environment-based and masked in audit/log structures
-- Automation approval is bound to content hash
-- Human overrides preserve original decision, reason, approver, and time
-
-This is a reference implementation, not a compliance certification. Read [security](docs/security.md), [human-in-the-loop](docs/human-in-the-loop.md), and [AI governance](docs/ai-governance.md).
-
-## CI/CD and Validation
-
-`ci.yml` runs Ruff, formatting, MyPy, Pytest, security tests, prompt validation, offline evaluation, TypeScript, ESLint, Prettier, Playwright, and a container build. `agent-evaluation.yml` gates prompt/agent changes. `nightly-quality.yml` repeats the full offline story. Normal PRs never require model credentials.
-
-Run the same checks locally:
-
-```bash
-ruff check .
-ruff format --check .
-mypy app tests
-pytest
-python scripts/validate_prompts.py
-python scripts/run_evaluations.py --provider mock
-(cd automation/playwright && npm run format:check && npm run lint && npm run typecheck && npm test)
-```
-
-The latest evidence-backed results are recorded in the [validation report](docs/validation-report.md).
-
-## Demonstrations
-
-- **Password Reset:** ambiguity, expiry, password policy, replay/negative/security coverage, and new-login validation.
-- **Payment Retry:** high financial risk, idempotency, bounded retries, integration failure, audit, and regression scope.
-
-The [interview walkthrough](docs/interview-walkthrough.md) provides two- and five-minute narratives plus architect-level questions.
+- [Architecture](docs/architecture.md)
+- [Agent Design](docs/agent-design.md)
+- [Orchestration](docs/orchestration.md)
+- [Agent Evaluation](docs/agent-evaluation.md)
+- [Observability](docs/observability.md)
+- [Security](docs/security.md)
+- [Human in the Loop](docs/human-in-the-loop.md)
+- [AI Governance](docs/ai-governance.md)
+- [Interview Walkthrough](docs/interview-walkthrough.md)
 
 ## Limitations
 
-- LLM outputs remain probabilistic and depend on requirement quality.
-- The mock provider validates contracts and routing, not real-model semantic quality.
-- Generated automation always requires engineering review.
-- AI triage confidence is not correctness.
-- SQLite is the default reference store; high-scale deployment should implement the repository interface on PostgreSQL.
-- The local JWT flow is for demonstration; production should use OIDC/Entra ID and managed secrets.
-- Lexical retrieval is intentionally simple until measured retrieval needs justify embeddings/reranking.
-- Release recommendations support but do not replace organisational governance.
+The mock provider validates framework contracts and routing, not real-model semantic quality. Generated automation always requires engineering review. SQLite is the default reference store. Production deployment should replace local auth with enterprise identity, durable databases and environment-specific governance.
 
-## Roadmap
+## Role alignment
 
-Measured next steps include PostgreSQL/pgvector storage, production OIDC, Jira/Azure DevOps ingestion adapters, GitHub PR impact evidence, richer trace parsing, OpenInference model spans, and benchmarked hybrid retrieval. They are extensions, not unfinished core controls.
+**AI Quality Architect · Agentic AI Quality Engineer · Test Architect · Quality Engineering Architect · Forward Deployed AI Engineer**
 
-## Contributing and License
+## Contributing and licence
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), and the [MIT License](LICENSE).
+See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and the [MIT License](LICENSE).
